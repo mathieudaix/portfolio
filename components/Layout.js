@@ -1,11 +1,14 @@
+import { ReactLenis } from '@studio-freight/react-lenis'
 import Nav from './nav/Nav'
 
 const Layout = ({ children }) => {
     return (
-        <main>
-            <Nav />
-            {children}
-        </main>
+        <ReactLenis root>
+            <main>
+                <Nav />
+                {children}
+            </main>
+        </ReactLenis>
     )
 }
 
