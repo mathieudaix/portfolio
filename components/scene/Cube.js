@@ -42,7 +42,7 @@ const Cube = ({ vec = new THREE.Vector3(), scale, r = randFloatSpread }) => {
             dispose={null}
         >
             <CuboidCollider args={[scale - 0.5, scale - 0.5, scale - 0.5]} />
-            <RoundedBox args={[scale, scale, scale]} castShadow receiveShadow radius={0.08} smoothness={8}>
+            <RoundedBox args={[scale, scale, scale]} castShadow receiveShadow radius={0.08} smoothness={2}>
                 <meshPhongMaterial color="#080808" roughness={0} clearcoatRoughness={0} />
             </RoundedBox>
         </RigidBody>
