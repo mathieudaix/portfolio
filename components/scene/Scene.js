@@ -28,7 +28,7 @@ export default function Scene() {
             </Physics>
 
             <EffectComposer multisampling={0}>
-                <N8AO color="#fff" aoRadius={2} intensity={1} />
+                // <N8AO color="#fff" aoRadius={2} intensity={1} />
                 // <SSAO />
             </EffectComposer>
 
