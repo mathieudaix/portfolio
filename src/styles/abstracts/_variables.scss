@@ -1,0 +1,45 @@
+$color-white: #fff;
+
+$color-dark: #080808;
+
+$color-gray: #5f7988;
+
+$color-background: #080808;
+
+$container: 90vw;
+
+$speed: 0.5s;
+$speed-fast: 0.25s;
+$speed-slow: 1s;
+
+$ease: cubic-bezier(0.265, 0.84, 0.44, 1);
+
+$size-default: 16px;
+$size-tiny: 3vw;
+$size-small: 2vw;
+$size-medium: 1.5vw;
+$size-large: 1.25vw;
+$size-big: 1vw;
+$size-huge: 0.9vw;
+$size-enormous: 16px;
+$size-gigantic: 17px;
+$size-colossal: 18px;
+
+$from-tiny: 500px;
+$to-tiny: $from-tiny - 1;
+$from-small: 700px;
+$to-small: $from-small - 1;
+$from-medium: 1000px;
+$to-medium: $from-medium - 1;
+$from-large: 1200px;
+$to-large: $from-large - 1;
+$from-big: 1400px;
+$to-big: $from-big - 1;
+$from-huge: 1600px;
+$to-huge: $from-huge - 1;
+$from-enormous: 1800px;
+$to-enormous: $from-enormous - 1;
+$from-gigantic: 2000px;
+$to-gigantic: $from-gigantic - 1;
+$from-colossal: 2400px;
+$to-colossal: $from-colossal - 1;

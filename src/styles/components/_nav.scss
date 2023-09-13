@@ -1,0 +1,149 @@
+nav {
+    padding: rem(3);
+    height: rem(8);
+    position: relative;
+    z-index: 2;
+    .grid {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: rem(2);
+        > a {
+            font-family: 'PPNeueMontreal-Bold';
+            font-size: rem(1.2);
+            text-transform: lowercase;
+            position: relative;
+            z-index: 3;
+        }
+        > div {
+            &:first-of-type {
+                justify-self: flex-end;
+                width: rem(2);
+                height: rem(2);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: rem(0.4);
+                cursor: pointer;
+                position: relative;
+                z-index: 3;
+                span {
+                    display: block;
+                    width: 100%;
+                    height: 1px;
+                    background: $color-white;
+                    transition: transform 0.4s $ease;
+                }
+            }
+            &:last-of-type {
+                width: 100%;
+                height: 40vh;
+                background: darken($color-background, 5%);
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                overflow: hidden;
+                transform: translateY(-100%);
+                transition: transform 0.8s $ease;
+                div {
+                    width: 100%;
+                    height: 100%;
+                    padding: rem(8) rem(3) rem(3);
+                    transform: translateY(100%);
+                    transition: transform 0.8s $ease;
+                }
+            }
+        }
+        ul {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7vw;
+            li {
+                position: relative;
+                @for $i from 1 through 3 {
+                    &:nth-child(#{$i}n) sup {
+                        transition-delay: #{$i * 0.25}s;
+                    }
+                }
+            }
+            sup {
+                position: absolute;
+                top: rem(2);
+                left: rem(-2);
+                font-size: rem(0.8);
+                opacity: 0;
+                transform: translateY(rem(-2));
+                transition: opacity 0.4s $ease, transform 0.4s $ease;
+            }
+            a {
+                font-size: 7vw;
+                overflow: hidden;
+                span {
+                    display: inline-block;
+                    transform: translateY(100%);
+                    transition: transform 0.8s $ease;
+                }
+                &.active {
+                    &::after {
+                        content: '';
+                        width: 100%;
+                        height: 2px;
+                        background: $color-white;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        transform: scaleX(0);
+                        transform-origin: left;
+                        transition: transform 1.2s $ease 0.5s;
+                    }
+                }
+            }
+        }
+    }
+    p {
+        justify-self: center;
+        font-size: rem(0.9);
+        text-transform: uppercase;
+    }
+    &.active {
+        .grid {
+            > div {
+                &:first-of-type {
+                    span {
+                        &:first-of-type {
+                            transform: rotate(45deg) translateY(rem(0.3));
+                        }
+                        &:last-of-type {
+                            transform: rotate(-45deg) translateY(rem(-0.3));
+                        }
+                    }
+                }
+                &:last-of-type {
+                    transform: translateY(0);
+                    div {
+                        transform: translateY(0);
+                    }
+                }
+            }
+            ul {
+                sup {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                a {
+                    span {
+                        transform: translateY(0);
+                    }
+                    &.active {
+                        &::after {
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
