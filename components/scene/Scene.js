@@ -5,7 +5,7 @@ import Pointer from './Pointer'
 import Cube from './Cube'
 import { Perf } from 'r3f-perf'
 
-const cubes = [...Array(50)].map(() => ({ scale: [0.9, 1, 1.1][Math.floor(Math.random() * 3)] }))
+const cubes = [...Array(25)].map(() => ({ scale: [0.9, 1, 1.1][Math.floor(Math.random() * 3)] }))
 
 export default function Scene() {
     return (
