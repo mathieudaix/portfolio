@@ -20,6 +20,9 @@ dependencies:
   '@studio-freight/react-lenis':
     specifier: ^0.0.28
     version: 0.0.28(react-dom@18.2.0)(react@18.2.0)
+  framer-motion:
+    specifier: ^10.16.4
+    version: 10.16.4(react-dom@18.2.0)(react@18.2.0)
   next:
     specifier: ^13.4.12
     version: 13.4.12(react-dom@18.2.0)(react@18.2.0)(sass@1.64.2)
@@ -76,6 +79,19 @@ packages:
   /@dimforge/rapier3d-compat@0.11.2:
     resolution: {integrity: sha512-vdWmlkpS3G8nGAzLuK7GYTpNdrkn/0NKCe0l1Jqxc7ZZOB3N0q9uG/Ap9l9bothWuAvxscIt0U97GVLr0lXWLg==}
     dev: false
+
+  /@emotion/is-prop-valid@0.8.8:
+    resolution: {integrity: sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==}
+    requiresBuild: true
+    dependencies:
+      '@emotion/memoize': 0.7.4
+    dev: false
+    optional: true
+
+  /@emotion/memoize@0.7.4:
+    resolution: {integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==}
+    dev: false
+    optional: true
 
   /@isaacs/cliui@8.0.2:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -682,6 +698,24 @@ packages:
     dependencies:
       cross-spawn: 7.0.3
       signal-exit: 4.1.0
+    dev: false
+
+  /framer-motion@10.16.4(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-p9V9nGomS3m6/CALXqv6nFGMuFOxbWsmaOrdmhyQimMIlLl3LC7h7l86wge/Js/8cRu5ktutS/zlzgR7eBOtFA==}
+    peerDependencies:
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      tslib: 2.6.1
+    optionalDependencies:
+      '@emotion/is-prop-valid': 0.8.8
     dev: false
 
   /fsevents@2.3.2:
