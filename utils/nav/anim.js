@@ -1,31 +1,21 @@
-const animIconTop = {
-    visible: { y: '0.2rem', rotate: 45 },
-    hidden: { y: 0, rotate: 0 }
-}
+import { transition } from '../utils'
 
-const animIconBottom = {
-    visible: { y: '-0.2rem', rotate: -45 },
-    hidden: { y: 0, rotate: 0 }
-}
+const visible = [
+    ['.icon span:first-of-type', { y: '0.2rem', rotate: 45 }, transition(0.4, 0)],
+    ['.icon span:last-of-type', { y: '-0.2rem', rotate: -45 }, transition(0.4, 0)],
+    ['.menu', { y: 0 }, transition(0.8, 0)],
+    ['.menu div', { y: 0 }, transition(0.8, 0)],
+    ['.menu li', { y: 0 }, transition(0.8, 0, 0.15)],
+    ['.menu .active + span', { scaleX: 1 }, transition(0.8, 0.5)]
+]
 
-const animMenu = {
-    visible: { y: 0 },
-    hidden: { y: '-100%' }
-}
+const hidden = [
+    ['.icon span:first-of-type', { y: 0, rotate: 0 }, transition(0.4, 0)],
+    ['.icon span:last-of-type', { y: 0, rotate: 0 }, transition(0.4, 0)],
+    ['.menu', { y: '-100%' }, transition(0.8, 0)],
+    ['.menu div', { y: '100%' }, transition(0.8, 0)],
+    ['.menu li', { y: '100%' }, transition(0.8, 0, 0.15)],
+    ['.menu .active + span', { scaleX: 0 }, transition(0.8, 0.5)]
+]
 
-const animMenuBg = {
-    visible: { y: 0 },
-    hidden: { y: '100%' }
-}
-
-const animLink = {
-    visible: { y: 0 },
-    hidden: { y: '100%' }
-}
-
-const animLine = {
-    visible: { scaleX: 1 },
-    hidden: { scaleX: 0 }
-}
-
-export { animIconTop, animIconBottom, animMenu, animMenuBg, animLink, animLine }
+export { visible, hidden }
