@@ -1,45 +1,12 @@
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { motion } from "framer-motion"
+import { animIconTop, animIconBottom, animMenu, animMenuBg, animLink, animLine } from '../../utils/nav/anim'
+import { transition } from '../../utils/utils'
+import { menu } from '../../utils/nav/menu'
 
 const Nav = () => {
     const [open, setOpen] = useState(false)
-
-    const animIconTop = {
-        visible: { y: '0.2rem', rotate: 45 },
-        hidden: { y: 0, rotate: 0 }
-    }
-
-    const animIconBottom = {
-        visible: { y: '-0.2rem', rotate: -45 },
-        hidden: { y: 0, rotate: 0 }
-    }
-
-    const animMenu = {
-        visible: { y: 0 },
-        hidden: { y: '-100%' }
-    }
-
-    const animMenuBg = {
-        visible: { y: 0 },
-        hidden: { y: '100%' }
-    }
-
-    const animLink = {
-        visible: { y: 0 },
-        hidden: { y: '100%' }
-    }
-
-    const animLine = {
-        visible: { scaleX: 1 },
-        hidden: { scaleX: 0 }
-    }
-
-    const navItems = [
-        { label: 'Home', href: '/' },
-        { label: 'Projects', href: '/' },
-        { label: 'About', href: '/' }
-    ]
 
     return (
         <motion.nav animate={open ? 'visible' : 'hidden'} initial="hidden">
@@ -49,22 +16,18 @@ const Nav = () => {
                 <p><sup>01 / </sup>Home</p>
 
                 <div onClick={() => setOpen(!open)}>
-                    <motion.span transition={{ type: 'tween', ease: [0.265, 0.84, 0.44, 1], duration: 0.4 }} variants={animIconTop}></motion.span>
-                    <motion.span transition={{ type: 'tween', ease: [0.265, 0.84, 0.44, 1], duration: 0.4 }} variants={animIconBottom}></motion.span>
+                    <motion.span transition={transition(0.4)} variants={animIconTop}></motion.span>
+                    <motion.span transition={transition(0.4)} variants={animIconBottom}></motion.span>
                 </div>
 
-                <motion.div transition={{ type: 'tween', ease: [0.265, 0.84, 0.44, 1], duration: 0.8 }} variants={animMenu}>
-                    <motion.div transition={{ type: 'tween', ease: [0.265, 0.84, 0.44, 1], duration: 0.8 }} variants={animMenuBg}>
-                        <motion.ul
-                            variants={{
-                                visible: { transition: { staggerChildren: 0.15 } }
-                            }}
-                        >
-                            {navItems.map((item, index) => (
-                                <motion.li key={index} transition={{ type: 'tween', ease: [0.265, 0.84, 0.44, 1], duration: 0.8 }} variants={animLink}>
+                <motion.div transition={transition(0.8)} variants={animMenu}>
+                    <motion.div transition={transition(0.8)} variants={animMenuBg}>
+                        <motion.ul transition={{ staggerChildren: 0.15 }}>
+                            {menu.map((item, index) => (
+                                <motion.li key={index} transition={transition(0.8)} variants={animLink}>
                                     <sup>{String(index + 1).padStart(2, '0')} / </sup>
-                                    <Link transition={{ type: 'tween', ease: [0.265, 0.84, 0.44, 1], duration: 0.8 }} variants={animLink} className={index === 0 ? 'active' : null} href={item.href}>{item.label}</Link>
-                                    {index === 0 && <motion.span transition={{ type: 'tween', ease: [0.265, 0.84, 0.44, 1], duration: 0.8, delay: 0.5 }} variants={animLine}></motion.span>}
+                                    <Link className={index === 0 ? 'active' : null} href={item.href}>{item.label}</Link>
+                                    {index === 0 && <motion.span transition={transition(0.8, 0.5)} variants={animLine}></motion.span>}
                                 </motion.li>
                             ))}
                         </motion.ul>
