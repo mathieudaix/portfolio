@@ -1,0 +1,24 @@
+.projects {
+    background: darken($color-background, 5%);
+    padding: rem(20) 0;
+    position: relative;
+    h2 {
+        font-size: rem(5);
+        text-align: center;
+        position: relative;
+        pointer-events: none;
+        margin-bottom: rem(12);
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(8);
+        div:nth-of-type(even) {
+            margin-top: rem(8);
+        }
+    }
+}

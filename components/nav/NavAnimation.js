@@ -2,7 +2,7 @@ import { useAnimate } from 'framer-motion'
 import { useEffect } from 'react'
 import { visible, hidden } from '../../utils/nav/anim'
 
-const NavAnimation = (isOpen) => {
+const NavAnimation = isOpen => {
     const [scope, animate] = useAnimate()
 
     useEffect(() => {

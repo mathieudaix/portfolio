@@ -1,5 +1,6 @@
 import Scene from '../components/scene/Scene'
 import { useEffect } from 'react'
+import Image from 'next/image'
 
 const Home = () => {
     useEffect(() => {
@@ -22,6 +23,7 @@ const Home = () => {
                 <div className='model'>
                     <Scene />
                 </div>
+
                 <div className='grid'>
                     <h1>Hello,<br />I'm Mathieu Daix</h1>
                     <p>I create an experience through<br />every production I build.</p>
@@ -29,8 +31,19 @@ const Home = () => {
                 </div>
             </header>
 
-            <section>
-                <p>lorem</p>
+            <section className='projects'>
+                <div className='container'>
+                    <h2>Projects</h2>
+
+                    <div className='grid'>
+                        <div>
+                            <Image src="/images/project.jpg" alt="Project" width={1} height={1} sizes="100vw" quality="70" />
+                        </div>
+                        <div>
+                            <Image src="/images/project.jpg" alt="Project" width={1} height={1} sizes="100vw" quality="70" />
+                        </div>
+                    </div>
+                </div>
             </section>
         </>
     )

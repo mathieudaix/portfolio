@@ -43,10 +43,3 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
-
-section {
-    background: lighten($color-dark, 5%);
-    padding: rem(50) rem(5);
-    color: $color-dark;
-    position: relative;
-}
