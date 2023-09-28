@@ -1,9 +1,7 @@
 import { Canvas } from '@react-three/fiber'
 import { Physics } from '@react-three/rapier'
-import { EffectComposer, N8AO, SSAO } from '@react-three/postprocessing'
 import Pointer from './Pointer'
 import Cube from './Cube'
-import { Perf } from 'r3f-perf'
 
 const cubes = [...Array(40)].map(() => ({ scale: [0.9, 1, 1.1][Math.floor(Math.random() * 3)] }))
 
@@ -26,13 +24,6 @@ export default function Scene() {
                     <Cube key={i} {...props} />
                 ))}
             </Physics>
-
-            {/* <EffectComposer multisampling={0}>
-                <N8AO color="#fff" aoRadius={2} intensity={1} />
-                <SSAO />
-            </EffectComposer> */}
-
-            {/* <Perf /> */}
         </Canvas>
     )
 }
