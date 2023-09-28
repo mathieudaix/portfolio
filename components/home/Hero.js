@@ -8,7 +8,6 @@ const Hero = () => {
     useEffect(() => {
         const handleScroll = () => {
             hero.current.style.transform = `translateY(${window.scrollY / 4}px)`
-
             heroGrid.current.style.opacity = 1.2 - (window.scrollY / 1000)
         }
 
@@ -29,7 +28,7 @@ const Hero = () => {
             <div className='grid' ref={heroGrid}>
                 <h1>Hello,<br />I'm Mathieu Daix</h1>
                 <p>I create an experience through<br />every production I build.</p>
-                <a className='btn' href="/projects">Discover my projects</a>
+                <a className='btn' href="/projects">See projects</a>
             </div>
         </header>
     )

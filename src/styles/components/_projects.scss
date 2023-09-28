@@ -9,32 +9,37 @@
         pointer-events: none;
         margin-bottom: rem(12);
     }
-    img {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 14 / 16;
-        object-fit: cover;
-    }
     .grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: rem(8);
-        div:nth-of-type(even) {
-            margin-top: rem(16);
-        }
-        div div {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin: rem(2) rem(1) 0;
-        }
-        h3 {
-            font-size: rem(3);
-            position: relative;
-            pointer-events: none;
-        }
-        a {
-            font-size: rem(3.5);
+        .project {
+            &:nth-of-type(even) {
+                margin-top: rem(16);
+            }
+            .image {
+                overflow: hidden;
+            }
+            .content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: rem(2) rem(1) 0;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 14 / 16;
+                object-fit: cover;
+            }
+            h3 {
+                font-size: rem(3);
+                position: relative;
+                pointer-events: none;
+            }
+            a {
+                font-size: rem(3.5);
+            }
         }
     }
 }

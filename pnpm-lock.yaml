@@ -47,6 +47,9 @@ dependencies:
   three:
     specifier: ^0.156.1
     version: 0.156.1
+  ukiyojs:
+    specifier: ^4.1.2
+    version: 4.1.2
 
 devDependencies:
   sass:
@@ -1579,6 +1582,11 @@ packages:
 
   /tslib@2.6.1:
     resolution: {integrity: sha512-t0hLfiEKfMUoqhG+U1oid7Pva4bbDPHYfJNiB7BiIjRkj1pyC++4N3huJfqY6aRH6VTB0rvtzQwjM4K6qpfOig==}
+    dev: false
+
+  /ukiyojs@4.1.2:
+    resolution: {integrity: sha512-8jdeM1uNlWb97vhuuTNqTCCTwZpdHH11YTt58AmgTiR7uyPpy0Yukd79WTEpJeKT+S4vlwEXEhDvbsqIWu0evw==}
+    engines: {node: '>=16'}
     dev: false
 
   /use-asset@1.0.4(react@18.2.0):
