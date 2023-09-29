@@ -17,7 +17,6 @@ const Hero = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll)
         }
-
     }, [])
 
     return (
