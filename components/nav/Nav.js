@@ -1,15 +1,9 @@
-import { useState } from 'react'
 import Link from 'next/link'
 import { menu } from '../../utils/nav/menu'
-import NavAnimation from './NavAnimation'
 
-const Nav = () => {
-    const [isOpen, setIsOpen] = useState(false)
-
-    const scope = NavAnimation(isOpen)
-
+const Nav = ({ isOpen, setIsOpen }) => {
     return (
-        <nav ref={scope}>
+        <nav>
             <div className="grid">
                 <Link href="/">MathieuDaix.</Link>
 
@@ -33,6 +27,8 @@ const Nav = () => {
                         </ul>
                     </div>
                 </div>
+
+                <span className='overlay' onClick={() => setIsOpen(!isOpen)}></span>
             </div>
         </nav>
     )

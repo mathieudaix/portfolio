@@ -1,5 +1,6 @@
 import Scene from '../scene/Scene'
 import { useEffect, useRef } from 'react'
+import Link from 'next/link'
 
 const Hero = () => {
     const hero = useRef()
@@ -26,9 +27,19 @@ const Hero = () => {
             </div>
 
             <div className='grid' ref={heroGrid}>
-                <h1>Hello,<br />I'm Mathieu Daix</h1>
-                <p>I create an experience through<br />every production I build.</p>
-                <a className='btn' href="/projects">See projects</a>
+                <div>
+                    <h1>Hello,<br />I'm Mathieu Daix</h1>
+                    <p>I create an experience through<br />every production I build.</p>
+                    <a className='btn' href="/projects">See projects</a>
+                </div>
+
+                <div className='right'>
+                    <p>Front-end creative developer</p>
+                    <span>-</span>
+                    <Link href='' target='_blank' rel='nofollow'>LinkedIn</Link>
+                    <span>-</span>
+                    <Link href='' target='_blank' rel='nofollow'>GitHub</Link>
+                </div>
             </div>
         </header>
     )

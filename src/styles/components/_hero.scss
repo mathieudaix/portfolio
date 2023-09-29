@@ -1,6 +1,8 @@
 .hero {
     height: 100vh;
     margin-top: rem(-8);
+    display: flex;
+    align-items: flex-end;
     .model {
         width: 100%;
         height: 100vh;
@@ -9,29 +11,39 @@
         left: 0;
     }
     .grid {
-        height: 100%;
+        width: 100%;
         padding-top: rem(8);
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: rem(2);
-    }
-    h1 {
-        font-size: rem(7);
-        text-align: center;
-        position: relative;
-        pointer-events: none;
-    }
-    p {
-        font-size: rem(1.8);
-        line-height: 1.4;
-        text-align: center;
-        position: relative;
-        pointer-events: none;
-    }
-    .btn {
-        margin-top: rem(2);
-        position: relative;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: rem(3);
+        transform-origin: top center;
+        h1 {
+            font-size: rem(6.5);
+            position: relative;
+            pointer-events: none;
+        }
+        p {
+            font-size: rem(1.6);
+            line-height: 1.4;
+            position: relative;
+            pointer-events: none;
+            margin: rem(1) 0 rem(3);
+        }
+        .btn {
+            margin: unset;
+            position: relative;
+        }
+        .right {
+            display: flex;
+            align-items: center;
+            gap: rem(1);
+            position: relative;
+            p,
+            a {
+                margin: unset;
+                font-size: rem(1.2);
+            }
+        }
     }
 }
