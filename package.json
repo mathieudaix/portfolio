@@ -17,6 +17,7 @@
         "@react-three/postprocessing": "^2.15.1",
         "@react-three/rapier": "^1.1.1",
         "@studio-freight/react-lenis": "^0.0.28",
+        "@vercel/analytics": "^1.0.2",
         "framer-motion": "^10.16.4",
         "next": "^13.4.12",
         "normalize-wheel": "^1.0.1",

@@ -35,20 +35,17 @@ nav {
         }
         .menu {
             width: 100%;
-            height: 40vh;
+            height: 0;
             background: darken($color-background, 5%);
             position: absolute;
             top: 0;
             left: 0;
             z-index: 2;
             overflow: hidden;
-            transform: translateY(-100%);
-            will-change: transform;
             div {
                 width: 100%;
                 height: 100%;
                 padding: rem(8) rem(3) rem(3);
-                transform: translateY(100%);
             }
         }
         ul {

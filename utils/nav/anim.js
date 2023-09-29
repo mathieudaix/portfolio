@@ -6,6 +6,8 @@ const visible = [
     ['nav .overlay', { opacity: 1 }, transition(0.8, 0)],
     ['nav .icon span:first-of-type', { y: '0.2rem', rotate: 45 }, transition(0.4, 0)],
     ['nav .icon span:last-of-type', { y: '-0.2rem', rotate: -45 }, transition(0.4, 0)],
+    ['nav .menu', { height: '40vh' }, transition(0.8, 0)],
+
     ['nav .menu', { y: 0 }, transition(0.8, 0)],
     ['nav .menu div', { y: 0 }, transition(0.8, 0)],
     ['nav .menu li', { y: 0 }, transition(0.8, 0, 0.15)],
@@ -22,6 +24,7 @@ const hidden = [
     ['nav .menu div', { y: '100%' }, transition(0.8, 0)],
     ['nav .menu li', { y: '100%' }, transition(0.8, 0, 0.15)],
     ['nav .menu .active + span', { scaleX: 0 }, transition(0.8, 0.5)],
+    ['nav .menu', { height: '0' }, transition(0.8, 0.8)],
 ]
 
 export { visible, hidden }

@@ -23,6 +23,9 @@ dependencies:
   '@studio-freight/react-lenis':
     specifier: ^0.0.28
     version: 0.0.28(react-dom@18.2.0)(react@18.2.0)
+  '@vercel/analytics':
+    specifier: ^1.0.2
+    version: 1.0.2
   framer-motion:
     specifier: ^10.16.4
     version: 10.16.4(react-dom@18.2.0)(react@18.2.0)
@@ -568,6 +571,10 @@ packages:
     dependencies:
       eventemitter3: 4.0.7
       react: 18.2.0
+    dev: false
+
+  /@vercel/analytics@1.0.2:
+    resolution: {integrity: sha512-BZFxVrv24VbNNl5xMxqUojQIegEeXMI6rX3rg1uVLYUEXsuKNBSAEQf4BWEcjQDp/8aYJOj6m8V4PUA3x/cxgg==}
     dev: false
 
   /@xobotyi/scrollbar-width@1.9.5:
