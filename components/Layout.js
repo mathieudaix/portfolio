@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
 
     return (
         <ReactLenis root>
-            <main ref={scope}>
+            <main ref={scope} className={isOpen ? 'noscroll' : null}>
                 <Nav isOpen={isOpen} setIsOpen={setIsOpen} />
                 {children}
             </main>

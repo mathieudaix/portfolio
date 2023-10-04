@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react'
 import { useWindowSize } from '@react-hook/window-size'
 import { useRafLoop } from 'react-use'
+import Link from 'next/link'
 
 const MarqueeItem = ({ content, speed }) => {
     const item = useRef(null)
@@ -41,9 +42,9 @@ const MarqueeItem = ({ content, speed }) => {
     useRafLoop(loop, true)
 
     return (
-        <div className="item" ref={item}>
+        <Link className="item" ref={item} href='mailto:mathieudaixpro@gmail.com'>
             {content}
-        </div>
+        </Link>
     )
 }
 
