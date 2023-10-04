@@ -1,6 +1,6 @@
 const menu = [
     { label: 'Home', href: '/' },
-    { label: 'Projects', href: '/' },
+    { label: 'Projects', href: '/projects' },
     { label: 'About', href: '/' }
 ]
 

@@ -2,7 +2,7 @@ import Hero from '../components/home/Hero'
 import Projects from '../components/home/Projects'
 import Contact from '../components/home/Contact'
 
-const Home = () => {
+const HomePage = () => {
     return (
         <>
             <Hero />
@@ -12,4 +12,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default HomePage
