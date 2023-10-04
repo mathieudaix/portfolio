@@ -1,13 +1,14 @@
 .contact {
     background: darken($color-background, 5%);
-    padding-bottom: rem(20);
+    height: 100vh;
+    display: flex;
     .marquee {
         display: flex;
         align-items: center;
     }
     .item {
-        font-size: 30vw;
-        padding-right: 7.5vw;
+        font-size: 15vw;
+        padding-right: 4vw;
         white-space: nowrap;
         user-select: none;
         font-family: 'PPNeueMontreal-Book';
