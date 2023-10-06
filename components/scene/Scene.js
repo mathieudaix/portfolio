@@ -2,6 +2,7 @@ import { Canvas } from '@react-three/fiber'
 import { Physics } from '@react-three/rapier'
 import Pointer from './Pointer'
 import Cube from './Cube'
+import CubeUnique from './CubeUnique'
 
 const cubes = [...Array(40)].map(() => ({ scale: [0.9, 1, 1.1][Math.floor(Math.random() * 3)] }))
 
@@ -23,6 +24,8 @@ export default function Scene() {
                 {cubes.map((props, i) => (
                     <Cube key={i} {...props} />
                 ))}
+
+                <CubeUnique />
             </Physics>
         </Canvas>
     )

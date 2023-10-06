@@ -29,7 +29,7 @@ const Hero = () => {
                 <div>
                     <h1>Hello,<br />I'm Mathieu Daix</h1>
                     <p>I create an experience through<br />every production I build.</p>
-                    <a className='btn' href="/projects">See projects</a>
+                    <a className='btn' href="#projects">Scroll to discover projects</a>
                 </div>
 
                 <div className='right'>

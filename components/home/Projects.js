@@ -17,7 +17,7 @@ const Projects = () => {
         })
 
         const handleScroll = () => {
-            project1.current.style.transform = `translateY(-${window.scrollY / 12}px)kair`
+            project1.current.style.transform = `translateY(-${window.scrollY / 10}px)`
             project2.current.style.transform = `translateY(-${window.scrollY / 4}px)`
         }
 
@@ -30,7 +30,7 @@ const Projects = () => {
     }, [])
 
     return (
-        <section className='projects'>
+        <section className='projects' id='projects'>
             <div className='container'>
                 <p><sup>02 / </sup>Projects</p>
                 <h2>Featured projects</h2>

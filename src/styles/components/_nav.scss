@@ -9,11 +9,14 @@ nav {
         grid-template-columns: 1fr 1fr 1fr;
         gap: rem(2);
         > a {
-            font-family: 'PPNeueMontreal-Bold';
-            font-size: rem(1.2);
-            text-transform: lowercase;
             position: relative;
             z-index: 3;
+            span {
+                display: inline-block;
+                font-family: 'PPNeueMontreal-Bold';
+                font-size: rem(1.2);
+                text-transform: lowercase;
+            }
         }
         .icon {
             justify-self: flex-end;

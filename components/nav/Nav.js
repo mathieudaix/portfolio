@@ -1,11 +1,21 @@
 import Link from 'next/link'
 import { menu } from '../../utils/nav/menu'
 
+const splitTextIntoSpans = (text) => {
+    return text.split('').map((letter, index) => (
+        <span style={{ transitionDelay: `${(index * 0.05).toFixed(1)}s` }} key={index}>{letter}</span>
+    ))
+}
+
 const Nav = ({ isOpen, setIsOpen }) => {
+    function animHoverLogo() {
+
+    }
+
     return (
         <nav>
             <div className="grid">
-                <Link href="/">MathieuDaix.</Link>
+                <Link href="/" onMouseEnter={animHoverLogo}>{splitTextIntoSpans('mathieudaix.')}</Link>
 
                 <p><sup>01 / </sup>Intro</p>
 
