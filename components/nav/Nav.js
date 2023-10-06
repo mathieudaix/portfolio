@@ -7,7 +7,7 @@ const Nav = ({ isOpen, setIsOpen }) => {
             <div className="grid">
                 <Link href="/">MathieuDaix.</Link>
 
-                <p><sup>01 / </sup>Home</p>
+                <p><sup>01 / </sup>Intro</p>
 
                 <div className='icon' onClick={() => setIsOpen(!isOpen)}>
                     <span></span>

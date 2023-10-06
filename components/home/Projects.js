@@ -4,7 +4,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const Projects = () => {
+    const project1 = useRef()
     const project1Image = useRef()
+
     const project2 = useRef()
     const project2Image = useRef()
 
@@ -15,7 +17,8 @@ const Projects = () => {
         })
 
         const handleScroll = () => {
-            project2.current.style.transform = `translateY(-${window.scrollY / 6}px)`
+            project1.current.style.transform = `translateY(-${window.scrollY / 12}px)kair`
+            project2.current.style.transform = `translateY(-${window.scrollY / 4}px)`
         }
 
         window.addEventListener('scroll', handleScroll)
@@ -29,9 +32,11 @@ const Projects = () => {
     return (
         <section className='projects'>
             <div className='container'>
+                <p><sup>02 / </sup>Projects</p>
                 <h2>Featured projects</h2>
+
                 <div className='grid'>
-                    <div className='project'>
+                    <div className='project' ref={project1}>
                         <div className='image'>
                             <Image className='ukiyo' ref={project1Image} src="/images/project-ffbad.jpg" alt="Project" width={1} height={1} sizes="100vw" quality="70" />
                         </div>
@@ -50,7 +55,36 @@ const Projects = () => {
                         </div>
                     </div>
                 </div>
-                <a className='btn' href="/projects">View all</a>
+
+                <h2>All projects</h2>
+
+                <div className='list'>
+                    <div className='project'>
+                        <h3>Kairos Blue</h3>
+                        <p>2023</p>
+                        <Link href="/">⮠</Link>
+                    </div>
+                    <div className='project'>
+                        <h3>i-Sea</h3>
+                        <p>2023</p>
+                        <Link href="/">⮠</Link>
+                    </div>
+                    <div className='project'>
+                        <h3>Ubique Architecture</h3>
+                        <p>2023</p>
+                        <Link href="/">⮠</Link>
+                    </div>
+                    <div className='project'>
+                        <h3>Mon Service RH</h3>
+                        <p>2022</p>
+                        <Link href="/">⮠</Link>
+                    </div>
+                    <div className='project'>
+                        <h3>Laura Van Puymbroeck</h3>
+                        <p>2020</p>
+                        <Link href="/">⮠</Link>
+                    </div>
+                </div>
             </div>
         </section>
     )

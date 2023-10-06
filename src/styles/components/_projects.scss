@@ -2,6 +2,11 @@
     background: darken($color-background, 5%);
     padding: rem(20) 0 0;
     position: relative;
+    .container > p {
+        font-size: rem(1.2);
+        text-align: center;
+        margin-bottom: rem(2);
+    }
     h2 {
         font-size: rem(5);
         text-align: center;
@@ -9,10 +14,17 @@
         pointer-events: none;
         margin-bottom: rem(12);
     }
+    h3 {
+        font-size: rem(3);
+    }
+    a {
+        font-size: rem(3.5);
+    }
     .grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: rem(8);
+        transform: translateY(rem(8));
         .project {
             &:nth-of-type(even) {
                 margin-top: rem(16);
@@ -32,13 +44,28 @@
                 aspect-ratio: 14 / 16;
                 object-fit: cover;
             }
-            h3 {
-                font-size: rem(3);
-                position: relative;
-                pointer-events: none;
+        }
+    }
+    .list {
+        display: grid;
+        gap: rem(2);
+        .project {
+            border-bottom: 1px solid $color-white;
+            padding-bottom: rem(2);
+            display: flex;
+            align-items: center;
+            gap: rem(2);
+            &:first-of-type {
+                border-top: 1px solid $color-white;
+                padding-top: rem(2);
+            }
+            p {
+                font-size: rem(1.4);
+                margin-top: rem(0.5);
             }
             a {
-                font-size: rem(3.5);
+                justify-self: flex-end;
+                margin-left: auto;
             }
         }
     }

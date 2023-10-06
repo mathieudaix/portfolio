@@ -1,7 +1,7 @@
 const menu = [
-    { label: 'Home', href: '/' },
+    { label: 'Intro', href: '/' },
     { label: 'Projects', href: '/projects' },
-    { label: 'About', href: '/' }
+    { label: 'Contact', href: '/' }
 ]
 
 export { menu }
