@@ -24,10 +24,10 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: rem(8);
-        transform: translateY(rem(8));
+        transform: translateY(rem(16));
         .project {
             &:nth-of-type(even) {
-                margin-top: rem(16);
+                margin-top: rem(24);
             }
             .image {
                 overflow: hidden;

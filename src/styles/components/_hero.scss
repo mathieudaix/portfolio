@@ -19,17 +19,18 @@
         padding: rem(3);
         transform-origin: top center;
         h1 {
-            font-size: rem(6.5);
+            font-size: 7vw;
             position: relative;
             pointer-events: none;
+            margin-bottom: rem(3);
         }
-        p {
-            font-size: rem(1.6);
-            line-height: 1.4;
-            position: relative;
-            pointer-events: none;
-            margin: rem(1) 0 rem(3);
-        }
+        // p {
+        //     font-size: rem(1.6);
+        //     line-height: 1.4;
+        //     position: relative;
+        //     pointer-events: none;
+        //     margin: rem(1) 0 rem(3);
+        // }
         .btn {
             margin: unset;
             position: relative;

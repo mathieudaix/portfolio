@@ -6,6 +6,14 @@ const HomePage = () => {
     return (
         <>
             <Hero />
+            <section className="about" id="about">
+                <div className="container">
+                    <p>
+                        I design products that combine creativity, technology and eco-design. I'm a creative front-end developer working at Kairos Agency based
+                        in Bordeaux, France.
+                    </p>
+                </div>
+            </section>
             <Projects />
             <Contact />
         </>

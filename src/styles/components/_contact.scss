@@ -3,6 +3,7 @@
     height: 100vh;
     display: flex;
     overflow-x: hidden;
+    position: relative;
     .marquee {
         display: flex;
         align-items: center;
@@ -13,5 +14,26 @@
         white-space: nowrap;
         user-select: none;
         font-family: 'PPNeueMontreal-Book';
+    }
+    > a {
+        position: absolute;
+        top: 52.5%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-5deg);
+        z-index: 1;
+        background: lighten($color-dark, 5%);
+        color: $color-white;
+        font-size: rem(2);
+        padding: rem(1.5) rem(2.25);
+        border-radius: rem(10);
+    }
+    .sticker {
+        position: absolute;
+        p {
+            background: lighten($color-dark, 5%);
+            font-size: rem(1.5);
+            padding: rem(0.75) rem(1.5);
+            border-radius: rem(10);
+        }
     }
 }
